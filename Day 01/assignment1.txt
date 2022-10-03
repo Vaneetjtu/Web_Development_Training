@@ -1,4 +1,4 @@
 1. Store variables, Perform operations on strings, API's, Dynamic pages etc
-2.JavaScriptCore 
+2. JavaScriptCore 
 3. Scripts load according to the order declared in html file
 4. ERR_FILE_NOT_FOUND it is case sensitive
