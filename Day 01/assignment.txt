@@ -5,7 +5,7 @@
 4. ERR_FILE_NOT_FOUND it is case sensitive
 
             Assignment 2
-1. Yes, Oprn dev tools by clicking on inspect and then open command menu by 
+1. Yes, Open dev tools by clicking on inspect and then open command menu by 
 using ctrl+shift+p and type javascript then select disable javascript
 
 2. Undefined shows a variable is declared but not intialised with any value
