@@ -9,7 +9,27 @@
 <body>
     <h1>Javascript Programming</h1>
     <br/>
+    <p id="p1"></p>
+    <p id="p2"></p>
 </body>
-<script src="./ClientScripts.js"></script>
-<script src="./ClientScripts2.js"></script>
+<!-- <script src="./ClientScripts.js"></script>
+<script src="./ClientScripts2.js"></script> -->
+<script>
+    window.alert("Welcome to JS--window.alert");
+    console.log("Welcome to JS--console.log");
+    document.write("Welcome to JS--document.write");
+
+    const obj1=document.getElementById("p1");
+    const obj2=document.getElementById("p2");
+
+    obj1.innerHTML="<strong>Welcome to JS<strong>";
+    obj2.innerText="<strong>Welcome to JS<strong>";
+
+    let a=10;
+    console.log(a);
+    a="hi"
+    console.log("A="+a);
+    a=100;
+    console.log("A="+a);
+</script>
 </html>
