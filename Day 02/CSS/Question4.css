@@ -1,7 +1,7 @@
 li {
-    color: blue;
+  color: blue;
 }
 
 li:nth-child(odd) {
-    color: green
+  color: green;
 }

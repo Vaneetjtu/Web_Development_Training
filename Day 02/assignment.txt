@@ -12,3 +12,11 @@
 
 3. See in Question3.html
 4. See in Question4.html
+
+            Assignment-2
+1. Push: It is used to add one or more element to the last index of array and it returns length of updated array.
+   Pop: It is used to remove last element of array and it returns removed element.
+   Slice: It is used to add or remove selected elements from array and syntax: array.splice(index,howmany,item1,...items).
+
+2. See in Question6.html
+3. See in Question7.html
