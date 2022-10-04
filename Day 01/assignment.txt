@@ -22,5 +22,15 @@ where as not defined shows a variable doesnot exists.
    1. Primitive data type: String, Number, Boolean, Undefined, Null
    2. Non-Primitive data type: Object, Array, RegExp
 
-   
+            Assignment 3
+1. == comapares two variables where as === checks the datatype and compare their values as well.
+2. isNan() is used for checking whether the passed value is Nan or not, it returns boolean output 
+e.g isNan(1)=false, isNan("hello")=true
+3.          Client Side             Server Side
+    Source code is visible      Source code is not visible 
+    to the user                 to user
+    Run's on a computer         Run's on server 
+    No data security            More data security  
+    E.g HTML,CSS, js            E.g PHP,Python,Java
+    
 
