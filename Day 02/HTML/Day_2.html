@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">Hi</p>
+    <input type="button" value="delete" onclick="fn_delete()"/>
+    <p id="p2"></p>
+</body>
+<script>
+    const obj1=document.getElementById("p1");
+    alert(obj1);
+
+    function fn_delete(){
+        const choice=confirm("Do you want to delete?");
+        const obj2=document.getElementById("p2");
+        if(choice)
+        {
+            alert("Product deleted");
+            obj2.innerHTML="Deleted";
+        }
+        else{
+            alert("Operation cancelled");
+            obj2.innerHTML="Cancelled";
+        }
+    }
+
+</script>
+</html>
