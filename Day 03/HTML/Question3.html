@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Branch Photos</h1>
+    <hr/>
+    <select id="select" onchange="fn_img()">
+        <option value="hyd">Hyderabad</option>
+        <option value="pune">Pune</option>
+        <option value="bgl">Bangalore</option>
+        <option value="che">Chennai</option>
+    </select>
+    <hr/>
+    <img id="img" border="2"  width="300"  height="200"/>
+</body>
+<script>
+    const fn_img=()=>{
+        const branch=document.getElementById("select").value;
+        const img=document.getElementById("img");
+        img.src="../Images/"+branch+".jpg";
+    }
+</script>
+</html>

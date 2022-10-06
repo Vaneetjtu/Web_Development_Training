@@ -1,0 +1,6 @@
+                Assignment-1
+1. It will map every element in calling array to the function given inside it e.g array1.map(x=>x*2) it will double 
+every element of array1 and return a new array of elements.
+2. See in Question2.html
+3. See in Question3.html
+4. See in Question4.html
