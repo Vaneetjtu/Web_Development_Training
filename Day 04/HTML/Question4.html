@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>User Details</h1>
+    <hr/>
+    <h4>Form</h4>
+    <form id="form" onsubmit="fn_submit()">
+    Employee Number: <input type="text" placeholder="Emp No." id="empno" onblur="fn_number()"/><br/>
+    Name: <input type="text" placeholder="Name" id="name" onblur="fn_name()"/><br/>
+    Job: <input type="text" placeholder="Job" id="job" onblur="fn_job()"/><br/>
+    Salary: <input type="text" placeholder="Salary" id="sal" onblur="fn_salary()"/><br/>
+    <input type="submit" value="Submit" id="btn"/>
+    <span id="lbl" style="color: red;"></span>
+    <br/>
+    </form>
+    <h4>Details</h4>
+    <table id="table">
+        <tr>
+            <th>Emp No.</th>
+            <th>Name</th>
+            <th>Job</th>
+            <th>Salary</th>
+        </tr>
+    </table>
+</body>
+<script>
+    const fn_number=()=>{
+        const phoneno = /^\d+$/;
+        const number=document.getElementById("empno").value;
+        if(!number.match(phoneno))
+        {
+            lbl.innerHTML="Invalid Employee Number";  
+        }
+        else{
+            lbl.innerHTML="";
+        }
+    }
+
+    const fn_name=()=>{
+        const name=document.getElementById("name").value;
+        if(name.trim()=="")
+        {
+            lbl.innerHTML="Name is required";
+        }
+        else{
+            lbl.innerHTML="";
+        }
+    }
+
+    const fn_job=()=>{
+        const job=document.getElementById("job").value;
+        if(job.trim()=="")
+        {
+            lbl.innerHTML="Job is required";
+        }
+        else{
+            lbl.innerHTML="";
+        }
+    }
+
+    const fn_salary=()=>{
+        const salary = /^\d+$/;
+        const sal=document.getElementById("sal").value;
+        if(!sal.match(salary))
+        {
+            lbl.innerHTML="Invalid Salary";
+        }
+        else{
+            lbl.innerHTML="";
+        }
+    }
+
+    const fn_submit=()=>{
+        if(lbl.innerHTML!="")
+        {
+            alert("Invalid data");
+            event.preventDefault();
+        }
+        else{
+            event.preventDefault();
+            const number=document.getElementById("empno").value;
+        const name=document.getElementById("name").value;
+        const job=document.getElementById("job").value;
+        const sal=document.getElementById("sal").value;
+        const table=document.getElementById("table");
+        let row1=table.insertRow(-1);
+        let cell1 = row1.insertCell(-1);
+          let cell2 = row1.insertCell(-1);
+          let cell3 = row1.insertCell(-1);
+          let cell4 = row1.insertCell(-1);
+
+          cell1.innerHTML=number;
+          cell2.innerHTML=name;
+          cell3.innerHTML=job;
+          cell4.innerHTML=sal;
+        }
+    }
+
+
+</script>
+</html>
