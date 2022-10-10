@@ -24,12 +24,32 @@
     </table>
   </body>
   <script>
-    const obj = {
-      EmpNo: 1,
-      Name: "Vaneet",
-      Job: "Analyst",
-      Salary: "100000",
-    };
+    const obj = [
+      {
+        EmpNo: 1,
+        Name: "Vaneet",
+        Job: "Web",
+        Salary: "100000",
+      },
+      {
+        EmpNo: 2,
+        Name: "Nikhil",
+        Job: "Oracle",
+        Salary: "100000",
+      },
+      {
+        EmpNo: 3,
+        Name: "Avanit",
+        Job: "S&C",
+        Salary: "100000",
+      },
+      {
+        EmpNo: 4,
+        Name: "Aadtiya",
+        Job: "SQL",
+        Salary: "100000",
+      },
+    ];
     const table = document.getElementById("table");
     let row = table.insertRow(-1);
     let cell1 = row.insertCell(-1);
@@ -38,24 +58,34 @@
     let cell4 = row.insertCell(-1);
     const fn_emp = () => {
       const emp = parseInt(prompt("Enter Emp No to search", 1));
-      if (obj.EmpNo === emp) {
-        cell1.innerHTML = obj.EmpNo;
-        cell2.innerHTML = obj.Name;
-        cell3.innerHTML = obj.Job;
-        cell4.innerHTML = obj.Salary;
-      } else {
+      let chk = false;
+      obj.map((item) => {
+        if (emp === item.EmpNo) {
+          cell1.innerHTML = item.EmpNo;
+          cell2.innerHTML = item.Name;
+          cell3.innerHTML = item.Job;
+          cell4.innerHTML = item.Salary;
+          chk = true;
+        }
+      });
+      if (!chk) {
         alert("Invalid Emp No.");
       }
     };
 
     const fn_job = () => {
-      const job = prompt("Enter Job to search", "Analyst");
-      if (job === obj.Job) {
-        cell1.innerHTML = obj.EmpNo;
-        cell2.innerHTML = obj.Name;
-        cell3.innerHTML = obj.Job;
-        cell4.innerHTML = obj.Salary;
-      } else {
+      const job = prompt("Enter Job to search", "Web");
+      let chk = false;
+      obj.map((item) => {
+        if (job === item.Job) {
+          cell1.innerHTML = item.EmpNo;
+          cell2.innerHTML = item.Name;
+          cell3.innerHTML = item.Job;
+          cell4.innerHTML = item.Salary;
+          chk = true;
+        }
+      });
+      if (!chk) {
         alert("Invalid Job");
       }
     };
