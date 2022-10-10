@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Employee Details</h1>
+    <hr />
+    <br />
+    <input type="button" value="Find By Empno" onclick="fn_emp()" />
+    <input type="button" value="Find By Job" onclick="fn_job()" />
+    <br />
+    <br />
+    <table id="table">
+      <tr>
+        <th>Emp No.</th>
+        <th>Name</th>
+        <th>Job</th>
+        <th>Salary</th>
+      </tr>
+    </table>
+  </body>
+  <script>
+    const obj = {
+      EmpNo: 1,
+      Name: "Vaneet",
+      Job: "Analyst",
+      Salary: "100000",
+    };
+    const table = document.getElementById("table");
+    let row = table.insertRow(-1);
+    let cell1 = row.insertCell(-1);
+    let cell2 = row.insertCell(-1);
+    let cell3 = row.insertCell(-1);
+    let cell4 = row.insertCell(-1);
+    const fn_emp = () => {
+      const emp = parseInt(prompt("Enter Emp No to search", 1));
+      if (obj.EmpNo === emp) {
+        cell1.innerHTML = obj.EmpNo;
+        cell2.innerHTML = obj.Name;
+        cell3.innerHTML = obj.Job;
+        cell4.innerHTML = obj.Salary;
+      } else {
+        alert("Invalid Emp No.");
+      }
+    };
+
+    const fn_job = () => {
+      const job = prompt("Enter Job to search", "Analyst");
+      if (job === obj.Job) {
+        cell1.innerHTML = obj.EmpNo;
+        cell2.innerHTML = obj.Name;
+        cell3.innerHTML = obj.Job;
+        cell4.innerHTML = obj.Salary;
+      } else {
+        alert("Invalid Job");
+      }
+    };
+  </script>
+</html>
