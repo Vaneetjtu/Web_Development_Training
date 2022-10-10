@@ -10,6 +10,7 @@
     <h1>Employee Details</h1>
     <hr />
     <br />
+    Search Value: <input type="text" id="user" placeholder="Enter Emp No or Job"/>
     <input type="button" value="Find By Empno" onclick="fn_emp()" />
     <input type="button" value="Find By Job" onclick="fn_job()" />
     <br />
@@ -57,7 +58,7 @@
     let cell3 = row.insertCell(-1);
     let cell4 = row.insertCell(-1);
     const fn_emp = () => {
-      const emp = parseInt(prompt("Enter Emp No to search", 1));
+      const emp = parseInt(document.getElementById("user").value);
       let chk = false;
       obj.map((item) => {
         if (emp === item.EmpNo) {
@@ -74,7 +75,7 @@
     };
 
     const fn_job = () => {
-      const job = prompt("Enter Job to search", "Web");
+      const job = (document.getElementById("user").value).toString();
       let chk = false;
       obj.map((item) => {
         if (job === item.Job) {
