@@ -25,19 +25,41 @@
       let response = await fetch("https://reqres.in/api/users");
       let result = await response.json();
       const table = document.getElementById("table");
-      for (let i = 0; i < result.data.length; i++) {
-        let row = table.insertRow(-1);
-        const cell1 = row.insertCell(-1);
-        const cell2 = row.insertCell(-1);
-        const cell3 = row.insertCell(-1);
-        const cell4 = row.insertCell(-1);
-        const cell5 = row.insertCell(-1);
-        cell1.innerHTML = result.data[i].id;
-        cell2.innerHTML = result.data[i].email;
-        cell3.innerHTML = result.data[i].first_name;
-        cell4.innerHTML = result.data[i].last_name;
-        cell5.innerHTML = result.data[i].avatar;
-      }
+      result.data.map((item) => {
+        const { id, email, first_name, last_name, avatar } = item;
+        const tr = document.createElement("tr");
+        let td1 = document.createElement("td");
+        let td2 = document.createElement("td");
+        let td3 = document.createElement("td");
+        let td4 = document.createElement("td");
+        let td5 = document.createElement("td");
+        td1.innerHTML = id;
+        td2.innerHTML = email;
+        td3.innerHTML = first_name;
+        td4.innerHTML = last_name;
+        td5.innerHTML = avatar;
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+        tr.appendChild(td4);
+        tr.appendChild(td5);
+        table.appendChild(tr);
+      });
+
+      // OR this will work too uncomment it and try it
+      //   for (let i = 0; i < result.data.length; i++) {
+      //     let row = table.insertRow(-1);
+      //     const cell1 = row.insertCell(-1);
+      //     const cell2 = row.insertCell(-1);
+      //     const cell3 = row.insertCell(-1);
+      //     const cell4 = row.insertCell(-1);
+      //     const cell5 = row.insertCell(-1);
+      //     cell1.innerHTML = result.data[i].id;
+      //     cell2.innerHTML = result.data[i].email;
+      //     cell3.innerHTML = result.data[i].first_name;
+      //     cell4.innerHTML = result.data[i].last_name;
+      //     cell5.innerHTML = result.data[i].avatar;
+      //   }
     };
   </script>
 </html>
