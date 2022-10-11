@@ -1,0 +1,8 @@
+            Assignment-1
+1. setInterval(): It calls a function at specified intervals in milliseconds until clearInterval() is not called 
+or window is not closed e.g setInterval(hello(),1000) Now for every 1000 milliseconds Hello will be printed.
+   setTimeout(): It calls a function after a number of milliseconds but it will only excecute once. 
+   e.g setTimeout(hello(),2000) Now it will print Hello after 2 seconds of excecution but will not repeat.
+
+2. It is used to prevent blocking as callback runs asynchronously which means no blocking 
+or we use to bind something to an event handler.
