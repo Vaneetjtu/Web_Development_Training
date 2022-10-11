@@ -29,13 +29,14 @@
         "Image7.jpg",
         "Image8.jpg",
       ];
+      let obj;
 
       const fn_stop=()=>{
-        
+        clearInterval(obj);
       }
 
       function fn_start() {
-        setInterval(fn_nextItem, 10);
+       obj= setInterval(fn_nextItem, 10);
       }
 
       function showData() {
