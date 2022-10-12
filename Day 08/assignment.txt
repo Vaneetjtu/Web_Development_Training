@@ -10,3 +10,12 @@ Universal Selector: It will select every HTML element e.g *{ }.
 
 2. CDNs are used widely for delivering stylesheets and JavaScript files 
 (static assets) of libraries like Bootstrap, jQuery etc.
+
+3. this is the DOM object, whereas $(this) is the jQuery wrapper around same,
+When using this, you can call DOM methods on it, but not jQuery methods,
+When using $(this), you can call jQuery methods on it, but not DOM methods.
+
+4. See in Question4.HTML
+5. The one() method attaches one or more event handlers for the selected 
+elements, and specifies a function to run when the event occurs. When using 
+the one() method, the event handler function is only run ONCE for each element.
