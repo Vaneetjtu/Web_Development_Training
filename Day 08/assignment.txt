@@ -19,3 +19,6 @@ When using $(this), you can call jQuery methods on it, but not DOM methods.
 5. The one() method attaches one or more event handlers for the selected 
 elements, and specifies a function to run when the event occurs. When using 
 the one() method, the event handler function is only run ONCE for each element.
+
+            Assignment-2
+6. 

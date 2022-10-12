@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Timer</h1>
+    <hr/>
+    <p id="time"></p>
+    <br/>
+</body>
+<script  src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script>
+    let start=new Date;
+    console.log(start);
+    setInterval(()=>{
+        $("#time").html((new Date - start)/1000 + " Seconds");
+    },1000);
+</script>
+</html>
