@@ -15,10 +15,13 @@ Universal Selector: It will select every HTML element e.g *{ }.
 When using this, you can call DOM methods on it, but not jQuery methods,
 When using $(this), you can call jQuery methods on it, but not DOM methods.
 
-4. See in Question4.HTML
-5. The one() method attaches one or more event handlers for the selected 
-elements, and specifies a function to run when the event occurs. When using 
-the one() method, the event handler function is only run ONCE for each element.
+5. See in Question4.HTML
 
             Assignment-2
-6. 
+6. The one() method attaches one or more event handlers for the selected 
+elements, and specifies a function to run when the event occurs. When using 
+the one() method, the event handler function is only run ONCE for each element.
+7. We can use class instead of id.
+8. See in Question8.HTML
+9. See in Question8.HTML
+10. See in Question8.HTML
