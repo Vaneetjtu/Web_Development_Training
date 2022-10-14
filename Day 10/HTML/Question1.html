@@ -16,6 +16,12 @@
     .u{
         text-decoration: underline;
     }
+    .click{
+        background-color: darkblue;
+    }
+    input:hover{
+        background-color: blue;
+    }
 </style>
 <body>
     <h1>Applying style using jQuery</h1>
@@ -33,12 +39,17 @@
 <script>
     $("#b").click(()=>{
         $("#ptag").toggleClass("b");
+        $("#b").toggleClass("click");
     })
     $("#u").click(()=>{
         $("#ptag").toggleClass("u");
+        $("#u").toggleClass("click");
+
     })
     $("#i").click(()=>{
         $("#ptag").toggleClass("i");
+        $("#i").toggleClass("click");
+
     })
 </script>
 </html>
