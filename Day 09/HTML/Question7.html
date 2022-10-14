@@ -20,44 +20,28 @@
     <script>
       $(document).ready(function () {
         $("#b1").click(function () {
-          $.ajax({
-            url: "https://www.w3schools.com/angular/customers.php",
-            type: "GET",
-            success: function (response) {
+            $.get("https://www.w3schools.com/angular/customers.php",((response)=>{
               let resData = JSON.parse(response);
               //  alert(resData.records);
               displayData(resData.records);
-            },
+            }))
           });
-        });
-      });
 
       function displayData(resData) {
-        //	console.log(resData);
 
-        // Clear table except header row (first row)
-
-        //	$("#table1  td").parent().remove();
-        //	$("#table1").find("tr:gt(0)").remove();
-        //	$("#table1   tr:not(:first)").remove();
         $("#table1   tr").not(":first").remove();
 
-        resData.map((item)=>{
-          const {Name, City, Country}=item;
-          let str = `<tr>  <td> ${Name} </td>  <td>${City}</td>  <td>${Country}</td>  </tr>`;
+        for (let item of resData) {
+          let str = `<tr>  <td> ${item.Name} </td>  <td>${item.City}</td>  <td>${item.Country}</td>  </tr>`;
           $("#table1").append(str);
-
-        })
-        // for (let item of resData) {
-        //   let str = `<tr>  <td> ${item.Name} </td>  <td>${item.City}</td>  <td>${item.Country}</td>  </tr>`;
-        //   $("#table1").append(str);
-        // }
+        }
 
         $("#table1  tr:even").css("background-color", "Pink");
         $("#table1  tr:odd").css("background-color", "lightblue");
 
         $("#table1  tr:first").css("background-color", "lightgreen");
       }
+      });
     </script>
   </body>
 </html>

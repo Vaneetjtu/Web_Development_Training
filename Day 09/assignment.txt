@@ -1,2 +1,9 @@
             Assignment-1
 See in HTML folder
+
+            Assignment-2
+1. prev(): It returns the previous sibling element of the selected element. Sibling elements are 
+elements that share the same parent.
+next(): It returns the next sibling element of the selected element.
+
+Rest questions are in HTML folder
