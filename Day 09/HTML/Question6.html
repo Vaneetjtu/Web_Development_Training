@@ -7,6 +7,8 @@
     <button id="b1">Get Server Data</button>
     <hr />
     <br/>
+    <br/>
+
   </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
@@ -17,7 +19,7 @@
           $.get("https://reqres.in/api/users",((res)=>{
             res.data.map((item)=>{
           const {first_name, avatar}=item;
-           str=str+`<div border="1" style="border-style: groove; width: 10%; margin: 0px 0px 0px 0px;"><img src=${avatar} height="100" width="100" style="flex-direction: column; border-radius: 100%;"/><a href="" style="color: red;">${first_name}</a></div>`;
+           str=str+`<div border="1" style="float:left; border-style: groove; height:250; width: 250; margin: 5px;"><img src=${avatar} height="100" width="100" style="border-radius: 100%;"/><a href="" style="color: red; text-align: center;">${first_name}</a></div>`;
         })
         $("#b1").after(str);
     }))
