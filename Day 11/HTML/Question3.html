@@ -41,15 +41,11 @@
           alert("Error");
           event.preventDefault();
         } else {
-          const empno = $("#empno").val();
-          const name = $("#name").val();
-          const job = $("#job").val();
-          const deptno = $("#deptno").val();
           const obj = {
-            EmpNo: empno,
-            Name: name,
-            Job: job,
-            DeptNo: deptno,
+            EmpNo: $("#empno").val(),
+            Name: $("#name").val(),
+            Job: $("#name").val(),
+            DeptNo: $("#deptno").val(),
           };
           $.post("http://localhost:3000/employee", obj, function (res) {
             console.log(res);
