@@ -1,32 +1,78 @@
-<!-- Create HTML Page to display Hello World message by using jQuery -->
+<!DOCTYPE html>
 <html>
   <head> </head>
   <body>
-    <h3>jQuery Programming</h3>
+    <h3>jQuery - Getting remote data from Server</h3>
     <hr />
-    Enter number : <input type="text" id="t1" onclick="cc_format()" /> <br /><br />
-    Enter Email : <input type="text" id="t2" /> <br /><br />
 
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <button id="b1">Get Server Data</button>
+    <button id="b2">Send Data to Server</button>
+    <hr />
+    <table id="table1" border="1" cellpadding="5" cellspacing="0" width="600">
+      <tr>
+        <th>Customer Name</th>
+        <th>City Name</th>
+        <th>Country Name</th>
+      </tr>
+    </table>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <script>
-        function cc_format() {
-          let  value=$("#t1").val();
-    var v = value.replace(/\s+/g, '').replace(/[^0-9]/gi, '')
-    var matches = v.match(/\d{4,16}/g);
-    var match = matches && matches[0] || ''
-    var parts = []
+      $(document).ready(function () {
+        $("#b1").click(function () {
+          $.ajax({
+            url: "http://localhost:3000/customers",
+            type: "GET",
+            success: function (response) {
+              displayData(response);
+            },
+          });
+        });
 
-    for (i=0, len=match.length; i<len; i+=4) {
-        parts.push(match.substring(i, i+4))
-    }
+        $("#b2").click(function () {
+          // 		var  newCustomerObj = {Name: 'Ravi Kiran', City: 'Pune', Country: 'India'};
+          var newCustomerObj = {};
+          newCustomerObj.Name = "Scott";
+          newCustomerObj.City = "Hyd";
+          newCustomerObj.Country = "India";
+          
+          console.log(JSON.stringify(newCustomerObj));
+          
+          $.ajax({
+              url: "http://localhost:3000/customers",
+              type: "POST",
+          ContentType: 'application/json',
+          dataType: "json",
+        data: JSON.stringify(newCustomerObj),
+              success: function (response) {
+              console.log(response);
+              alert("New Customer Details are saved in server");
+            },
+          });
+        });
+      });
 
-    if (parts.length) {
-        return parts.join(' ')
-    } else {
-        console.log(value);
-    }
-}
+      function displayData(resData) {
+        //	console.log(resData);
+
+        // Clear table except header row (first row)
+
+        //	$("#table1  td").parent().remove();
+        //	$("#table1").find("tr:gt(0)").remove();
+        //	$("#table1   tr:not(:first)").remove();
+        $("#table1   tr").not(":first").remove();
+
+        for (let item of resData) {
+          let str = `<tr>  <td> ${item.Name} </td>  <td>${item.City}</td>  <td>${item.Country}</td>  </tr>`;
+          $("#table1").append(str);
+        }
+
+        $("#table1  tr:even").css("background-color", "Pink");
+        $("#table1  tr:odd").css("background-color", "lightblue");
+
+        $("#table1  tr:first").css("background-color", "lightgreen");
+      }
     </script>
   </body>
 </html>
