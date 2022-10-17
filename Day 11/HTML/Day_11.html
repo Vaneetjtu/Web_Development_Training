@@ -1,0 +1,43 @@
+<!-- Create HTML Page to display Hello World message by using jQuery -->
+<html>
+  <head> </head>
+  <body>
+    <h3>jQuery Programming</h3>
+    <hr />
+    Enter number : <input type="text" id="t1" /> <br /><br />
+    Enter Email : <input type="text" id="t2" /> <br /><br />
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#t1").keyup(function () {
+          $(".error-t1").remove();
+          var inputVal = $(this).val();
+          var numericReg = /^\d*[0-9](|.\d*[0-9]|,\d*[0-9])?$/;
+
+          //				alert(  numericReg.test( inputVal )  );
+          //  			test()  method returns true or false
+
+          if (numericReg.test(inputVal) == false && inputVal.length > 0) {
+            $(this).after(
+              '<span  class="error-t1">Numeric characters only.</span>'
+            );
+          }
+        });
+
+        $("#t2").keyup(function () {
+          $(".error-t2").remove();
+          var inputVal = $(this).val();
+          var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+
+          if (emailReg.test(inputVal) == false) {
+            $(this).after(
+              '<span  class="error-t2">Enter Valid email address</span>'
+            );
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
