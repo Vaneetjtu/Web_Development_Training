@@ -1,4 +1,5 @@
 const product=require("./ProductModule");
+console.log("--------------------------------------------------------------------------------------");
 console.log("All Products");
 product.allProducts().map((item)=>{
     const {Product, Cat, Price, Qty }=item;
