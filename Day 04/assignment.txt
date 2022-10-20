@@ -1,7 +1,0 @@
-            Assignment-1
-1. See in Question1.html
-2. See in Question2.html
-3. onKeypress: It cccurs when user presses a key. e.g onKeypress="function".
-   onkeyup: It occurs when user releases a key on keyboard. e.g onKeyup="function".
-   onkeydown: It is similar to onKeypress.
-4. See in Question4.html
