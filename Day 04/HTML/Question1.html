@@ -1,0 +1,63 @@
+<html>
+  <head></head>
+  <body>
+    <h3>JavaScript Programming -- Array Of Objects - Dynamic DOM</h3>
+    <hr />
+
+    <input type="button" value="Add Rows" onclick="fn_addRows()" />
+    <input type="button" value="Delete Rows" onclick="fn_deleteRows()" />
+    <input type="button" value="Clear Rows" onclick="fn_clearRows()" />
+
+    <br /><br />
+    <table id="table1" border="2" width="500" cellpadding="10" cellspacing="0">
+      <tr>
+        <th>S.No</th>
+        <th>Student Name</th>
+        <th>Skillset</th>
+      </tr>
+    </table>
+
+    <script>
+      let tableObj = document.getElementById("table1");
+      let studentsArray = [
+        { sid: 454545, sname: "Smith-1", skillset: "Angular" },
+        { sid: 454546, sname: "Smith-2", skillset: "React" },
+        { sid: 454547, sname: "Smith-3", skillset: "Node JS" },
+        { sid: 454548, sname: "Smith-4", skillset: "HTML5" },
+        { sid: 454549, sname: "Smith-5", skillset: "CSS3" },
+        { sid: 454542, sname: "Smith-5", skillset: "Bootstrap" },
+        { sid: 454543, sname: "Smith-6", skillset: "jQuery" },
+      ];
+
+      const fn_clearRows = () => {
+        let len = tableObj.rows.length;
+        for (let i = len - 1; i > 0; i--) {
+          tableObj.deleteRow(i);
+        }
+      };
+
+      const fn_deleteRows = () => {
+        let len = tableObj.rows.length;
+        if (len > 1) {
+          tableObj.deleteRow(len - 1);
+          len--;
+        } else {
+          alert("No rows to delete");
+        }
+      };
+      function fn_addRows() {
+        for (let item of studentsArray) {
+          let row1 = tableObj.insertRow(-1);
+
+          let cell1 = row1.insertCell(-1);
+          let cell2 = row1.insertCell(-1);
+          let cell3 = row1.insertCell(-1);
+
+          cell1.innerHTML = item.sid;
+          cell2.innerHTML = item.sname;
+          cell3.innerHTML = item.skillset;
+        }
+      }
+    </script>
+  </body>
+</html>

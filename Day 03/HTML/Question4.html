@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>User Form</h1>
+    <br/>
+    <form onsubmit="fn_submit()">
+        Customer Name: <input type="text" placeholder="Name" id="name" autofocus onblur="fn_name()"/><br/><br/>
+        Source Station: <input type="text" placeholder="Source Station" id="sstation"/><br/><br/>
+        Destination Station: <input type="text" placeholder="Destination Station" id="dstation" onblur="fn_station()"/><br/><br/>
+        Contact Number: <input type="text" placeholder="Contact Number" id="cnumber" onblur="fn_number()"/><br/><br/>
+        <input type="submit" value="Submit"/>
+        <span style="color: red;" id="lbl"></span>
+    </form>
+</body>
+<script>
+    const lbl=document.getElementById("lbl");
+    const fn_name=()=>{
+        const cname=document.getElementById("name").value;
+        if(cname.trim()=="")
+        {
+            lbl.innerHTML="Name is required";
+        }
+        else{
+            lbl.innerHTML="";
+        }
+    }
+
+    const fn_station=()=>{
+        const sstation=document.getElementById("sstation").value;
+        const dstation=document.getElementById("dstation").value;
+        if(sstation.trim()==""||dstation.trim()=="")
+        {
+            lbl.innerHTML="Station cannot be empty";
+        }
+        else if(sstation===dstation)
+        {
+            lbl.innerHTML="Source and Destination cannot be same";
+            
+        }
+        else{
+            lbl.innerHTML="";
+        }
+    }
+    const fn_number=()=>{
+        const phoneno = /^\d{10}$/;
+        const cnumber=document.getElementById("cnumber").value;
+        if(!cnumber.match(phoneno))
+        {
+            lbl.innerHTML="Enter valid mobile number";  
+        }
+        else{
+            lbl.innerHTML="";
+        }
+    }
+    const fn_submit=()=>{
+        if(lbl.innerHTML!="")
+        {
+            alert("Invalid Information");
+            event.preventDefault();
+        }
+    }
+</script>
+</html>

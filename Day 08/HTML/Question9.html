@@ -1,0 +1,75 @@
+<html>
+  <head></head>
+  <body>
+    <h3>JavaScript Programming -- Timer Programming</h3>
+    <hr />
+
+    <input type="button" value="Start" onclick="fn_start()" />
+    <input type="button" value="Stop" onclick="fn_stop()" />
+
+    <hr />
+    <!-- <h1  id="head1">Image1.jpg</h1> -->
+    <img
+      src="../Image/Image1.jpg"
+      id="img1"
+      border="2"
+      width="80%"
+      height="100"
+      onmouseover="fn_in()"
+      onmouseout="fn_out()"
+    />
+  </body>
+
+<script  src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+
+    <script>
+      var count = 0; // global variable
+      var imagesArray = [
+        "Image1.jpg",
+        "Image2.jpg",
+        "Image3.jpg",
+        "Image4.jpg",
+        "Image5.jpg",
+        "Image6.jpg",
+        "Image7.jpg",
+        "Image8.jpg",
+      ];
+      let obj;
+
+      const fn_in=()=>{
+        $("#img1").attr("width", "100%");
+        $("#img1").attr("height", "400");
+      }
+
+      const fn_out=()=>{
+        $("#img1").attr("width", "90%");
+        $("#img1").attr("height", "100");
+      }
+
+      const fn_stop=()=>{
+        clearInterval(obj);
+      }
+
+      function fn_start() {
+       obj= setInterval(fn_nextItem, 1000);
+      }
+
+      function showData() {
+        //	var  headObj  =  document.getElementById("head1");
+        var imgObj = document.getElementById("img1");
+        //	headObj.innerHTML = 	"Images/" +  imagesArray[count];
+        imgObj.src = "../Image/" + imagesArray[count];
+      }
+
+      function fn_nextItem() {
+        count++;
+
+        if (count > imagesArray.length - 1) {
+          count = 0;
+        }
+
+        showData();
+      }
+    </script>
+</html>

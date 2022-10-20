@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .b{
+        font-weight: bold;
+    }
+    .i{
+        font-style: italic;
+    }
+    .u{
+        text-decoration: underline;
+    }
+    .click{
+        background-color: red;
+    }
+    input:hover{
+        background-color: blue;
+    }
+</style>
+<body>
+    <h1>Applying style using jQuery</h1>
+    <hr/>
+    <br/>
+    <input id="b" type="button" value="B" style="border: 2px; border-style: groove;"/>
+    <input id="u" type="button" value="U" style="border: 2px; border-style: groove;"/>
+    <input id="i" type="button" value="I" style="border: 2px; border-style: groove;"/>
+    <br/>
+    <p id="ptag" style="border: 5px; border-style:groove;">
+    This is a test paragraph.This is a test paragraph.This is a test paragraph.This is a test paragraph.This is a test paragraph.</p>
+
+</body>
+<script  src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script>
+    $("#b").click(()=>{
+        $("#ptag").toggleClass("b");
+        $("#b").toggleClass("click");
+    })
+    $("#u").click(()=>{
+        $("#ptag").toggleClass("u");
+        $("#u").toggleClass("click");
+
+    })
+    $("#i").click(()=>{
+        $("#ptag").toggleClass("i");
+        $("#i").toggleClass("click");
+
+    })
+</script>
+</html>

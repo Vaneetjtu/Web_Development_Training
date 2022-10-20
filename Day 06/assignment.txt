@@ -1,0 +1,6 @@
+            Assignment-1
+1. For adding an event handler we can use element.addEventListener("event",handler);
+For removing an event handler we can use element.removeEventListener("event",handler);
+
+2. See in Question2.html
+3. See in Question3.html

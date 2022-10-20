@@ -1,0 +1,22 @@
+            Assignment-1
+1. JS has three types of popup boxes:
+    1. Alert box: It is used to alert the user about some action. Syntax: window.alert("message").
+    2. Confirm box: It is used to verify the data entered by user. Syntax: window.confirm("message").
+    3. Prompt box: It is used to take input fron the user before entering a page. Syntax: window.prompt("message","defaulttext").
+
+2.          BOM                     DOM
+    1. Browser Object Model    1. Document Object Model
+    2. It deals with history   2. It deals with document and
+    ,navigator, location etc      all the HTML elements
+
+
+3. See in Question3.html
+4. See in Question4.html
+
+            Assignment-2
+1. Push: It is used to add one or more element to the last index of array and it returns length of updated array.
+   Pop: It is used to remove last element of array and it returns removed element.
+   Slice: It is used to add or remove selected elements from array and syntax: array.splice(index,howmany,item1,...items).
+
+2. See in Question6.html
+3. See in Question7.html

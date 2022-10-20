@@ -1,0 +1,36 @@
+            Assignment-1
+1. Store variables, Perform operations on strings, API's, Dynamic pages etc
+2. JavaScriptCore 
+3. Scripts load according to the order declared in html file
+4. ERR_FILE_NOT_FOUND it is case sensitive
+
+            Assignment 2
+1. Yes, Open dev tools by clicking on inspect and then open command menu by 
+using ctrl+shift+p and type javascript then select disable javascript
+
+2. Undefined shows a variable is declared but not intialised with any value
+where as not defined shows a variable doesnot exists.
+
+3.          Java                    Javascript
+    Strongly typed language     Loosely typed language
+    It runs in JVM              It runs only in browser
+    It has .java as extension   It has .js as extension
+    It is class-based           It is prototype based
+    Programming language        Scripting language
+
+4. It has two types of data types:
+   1. Primitive data type: String, Number, Boolean, Undefined, Null
+   2. Non-Primitive data type: Object, Array, RegExp
+
+            Assignment 3
+1. == comapares two variables where as === checks the datatype and compare their values as well.
+2. isNan() is used for checking whether the passed value is Nan or not, it returns boolean output 
+e.g isNan(1)=false, isNan("hello")=true
+3.          Client Side             Server Side
+    Source code is visible      Source code is not visible 
+    to the user                 to user
+    Run's on a computer         Run's on server 
+    No data security            More data security  
+    E.g HTML,CSS, js            E.g PHP,Python,Java
+    
+
