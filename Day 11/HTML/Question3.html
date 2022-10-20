@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Employee Data</h1>
+    <hr />
+    <br />
+    Emp No. <input type="text" id="empno" /><br />
+    <br />
+    Name. <input type="text" id="name" /><br />
+    <br />
+    Job:
+    <select id="job">
+      <option value="Analyst">Analyst</option>
+      <option value="Manager">Manager</option>
+      <option value="Director">Director</option></select
+    ><br /><br />
+    Dept No. <input type="text" id="deptno" /><br />
+    <br />
+    <span id="error"></span><br />
+    <input type="button" id="btn" value="Submit" />
+  </body>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#deptno").keyup(function () {
+        $("#error").html("");
+        const dep = /^[0-9]*$/;
+        let input = $(this).val();
+        if (dep.test(input) === false) {
+          $("#error").html("Invalid Dept No.");
+        }
+      });
+      $("#btn").click(function () {
+        if ($("#error").html() !== "") {
+          alert("Error");
+          event.preventDefault();
+        } else {
+          const obj = {
+            EmpNo: $("#empno").val(),
+            Name: $("#name").val(),
+            Job: $("#name").val(),
+            DeptNo: $("#deptno").val(),
+          };
+          $.post("http://localhost:3000/employee", obj, function (res) {
+            console.log(res);
+          });
+        }
+      });
+    });
+  </script>
+</html>
