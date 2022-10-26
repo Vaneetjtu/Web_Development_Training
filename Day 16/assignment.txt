@@ -1,0 +1,2 @@
+                Assignment-1
+1. Default export is used to export the module from one file to another and it can be used only once per file.
