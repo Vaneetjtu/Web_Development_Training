@@ -16,11 +16,11 @@
 <input type="button" (click)="Reset()" value="Reset" />  <br/>
 <div *ngFor="let item of productArray">
     <div class="pdt">
-    <p>Product Id:{{item.id}}</p>
-    <p>Name:{{item.name}}</p>
-    <p>Price:{{item.price}}</p>
-    <p>Category:{{item.cat}}</p>
-    <p>Qty:{{item.qty}}</p>
+    <p class="pdt__text">Product Id:{{item.id}}</p>
+    <p class="pdt__text">Name:{{item.name}}</p>
+    <p class="pdt__text">Price:{{item.price}}</p>
+    <p class="pdt__text">Category:{{item.cat}}</p>
+    <p class="pdt__text">Qty:{{item.qty}}</p>
     </div>
 </div>
 </fieldset>

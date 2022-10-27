@@ -1,6 +1,8 @@
-.body{
-    background-color: blue;
+.pdt{
+    float: left;
+    margin-right: 20px;
+    background-color: rgb(255, 197, 176);
 }
-.txt{
-    color: white;
+.pdt__text{
+    text-align: center;
 }
