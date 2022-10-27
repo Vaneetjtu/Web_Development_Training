@@ -1,0 +1,22 @@
+<h3>Data Binding in Angular</h3>
+<hr/>
+<div class="body">
+<fieldset>
+<legend class="txt">Simple/Compund Interest Calculator</legend>
+
+<label class="txt">Principal Amount:</label><input type="number" [(ngModel)]="amount"   />  
+<br/><br/>
+<label class="txt">Rate% Per Year: </label><input type="number" [(ngModel)]="rate"   />  
+<br/><br/>
+<label class="txt">Time Period (In Years): </label><input type="number" [(ngModel)]="time"   />  
+<br/><br/>
+<input type="checkbox"[(ngModel)]="sim"><label class="txt">Simple Interest</label>
+<input type="checkbox" value="Compound Interest" [(ngModel)]="com"/> <label class="txt">Compound Interest</label>
+<br/><br/>
+<input type="button" (click)="Submit()" value="Calculate Interest" />  
+
+<p> <label class="txt">Simple Interest:{{sresult}}</label> </p>
+<p> <label class="txt">Compound Interest: {{cresult}}</label></p>
+
+</fieldset>
+</div>
