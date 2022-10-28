@@ -1,0 +1,11 @@
+<h3  align="center">User Data</h3>
+<hr/>  
+<input type="button" *ngIf="btn" (click)="fn_load()" value="Load More">
+    <fieldset class="space">
+        <fieldset class="space" *ngFor="let item of userArray | slice: start: end">
+            <p>Name: {{item.name}}</p>
+            <p>Age: {{item.age}}</p>
+            <p>Role: {{item.role}}</p>
+            <p>Salary: {{item.salary}}</p>
+        </fieldset>
+    </fieldset>

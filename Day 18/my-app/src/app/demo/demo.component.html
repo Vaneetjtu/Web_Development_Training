@@ -1,0 +1,27 @@
+<h1 align="center">Employee Details</h1>
+<hr/>
+<table border="2" align="center">
+    <tr class="thead">
+        <th>S.No.</th>
+        <th>Employee Name</th>
+        <th>Performance Grades</th>
+    </tr>
+    <tr class="data" *ngFor="let item of emparray">
+        <td>{{item.sno}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.grade}}</td>
+    </tr>
+</table>
+<br/>
+<table border="2" align="center">
+    <tr class="thead">
+        <th>S.No.</th>
+        <th>Employee Name</th>
+        <th>Performance Grades</th>
+    </tr>
+    <tr class="data" *ngFor="let item of emparray">
+        <td>{{item.sno}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.grade | grade}}</td>
+    </tr>
+</table>
