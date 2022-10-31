@@ -1,0 +1,21 @@
+<h1>Employee Data</h1>
+<hr/>
+<br/>
+<input type="button" value="Get Data" (click)="getData()">
+<br/>
+<br/>
+
+<table border="1">
+    <tr>
+        <th>Employee No.</th>
+        <th>Employee Name</th>
+        <th>Job</th>
+        <th>Dept No.</th>
+    </tr>
+    <tr *ngFor="let item of data">
+        <td>{{item.EmpNo}}</td>
+        <td>{{item.Name}}</td>
+        <td>{{item.Job}}</td>
+        <td>{{item.DeptNo}}</td>
+    </tr>
+</table>
