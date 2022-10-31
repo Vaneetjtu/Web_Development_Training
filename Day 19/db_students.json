@@ -1,0 +1,25 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Scott",
+      "city": "Hyderabad",
+      "email": "scott@gmail.com",
+      "age": "25"
+    },
+    {
+      "id": 4,
+      "name": "Naveen",
+      "city": "Chennai",
+      "email": "naveen@gmail.com",
+      "age": "25"
+    },
+    {
+      "id": 5,
+      "name": "Srini",
+      "city": "Hyd",
+      "email": "srini@gmail.com",
+      "age": "22"
+    }
+  ]
+}

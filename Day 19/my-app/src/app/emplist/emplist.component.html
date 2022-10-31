@@ -1,0 +1,32 @@
+<h3>Perform CRUD operations with JSON Server in Angular</h3>
+<hr/>
+<input type="text"  [(ngModel)]="empno"  placeholder="Employee No."  />
+<input type="text"  [(ngModel)]="name"  placeholder="Name"  />
+<input type="text"  [(ngModel)]="job"  placeholder="Job"  />
+<input type="text"  [(ngModel)]="deptno"  placeholder="Dept No."  />
+<br/><br/>
+<input type="button" value="Get Employees" (click)="getData_click()"  />
+<input type="button" value="Add Employee" (click)="addData_click()"  />
+<input type="button"  value="Update Employee" (click)="updateData_click()"  />
+<input type="button"  value="Clear Fields"    />
+<br><br>
+
+<table border="2"   cellspacing="0">
+	<tr>
+	  <th>Employee No.</th>
+	  <th>Name</th>
+	  <th>Job</th>
+	  <th>Dept No.</th>
+	</tr>
+
+	<tr *ngFor="let item of empArray">
+	  <td>{{item.id}}</td>
+	  <td>{{item.Name}}</td>
+	  <td>{{item.Job}}</td>
+	  <td>{{item.DeptNo}}</td>    
+	  <td align="center">
+		<a href="javascript:void(0);" (click)="selectData_click(item.id)">Select</a> |
+		<a href="javascript:void(0);" (click)="deleteData_click(item.id)">Delete</a>
+	  </td>
+	</tr>
+  </table>

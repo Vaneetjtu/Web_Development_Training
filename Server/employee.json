@@ -1,29 +1,24 @@
 {
   "employee": [
     {
-      "EmpNo": "1",
       "Name": "Vaneet",
       "Job": "Analyst",
       "DeptNo": "1212",
       "id": 1
     },
     {
-      "EmpNo": "2",
-      "Name": "Harry",
+      "id": 2,
+      "Name": "Harri",
       "Job": "Analyst",
-      "DeptNo": "1212",
-      "id": 2
-    }
-    ,
+      "DeptNo": "1212"
+    },
     {
-      "EmpNo": "3",
       "Name": "Barry",
       "Job": "Manager",
       "DeptNo": "1212",
       "id": 3
     },
     {
-      "EmpNo": "4",
       "Name": "Larry",
       "Job": "Analyst",
       "DeptNo": "1212",

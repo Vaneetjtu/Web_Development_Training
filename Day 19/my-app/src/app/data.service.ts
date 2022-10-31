@@ -1,12 +1,11 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-
-  constructor() { }
-
   getProducts():any[]{
     const productArray:any[]=[
       {id:1, name:"Milk",price:100,cat:"diary",qty:2},
@@ -28,5 +27,37 @@ export class DataService {
       {sno: 8, name:"Scott8",grade:2}
     ]
     return empArray;
+  }
+
+  public dataArray:any[] = [];
+  public url:string  =  "http://localhost:3000/employee/";
+  
+  constructor(private  httpObj:HttpClient) {
+    
+  }
+
+  getAll():Observable<any>
+  {     
+      return this.httpObj.get(this.url);
+  }
+
+  getById(id:number):Observable<any>
+  {       
+      return this.httpObj.get(this.url + id);
+  }
+
+  add(Obj:any):Observable<any>
+  {   
+      return this.httpObj.post(this.url , Obj);
+  }
+
+  update(Obj:any):Observable<any>
+  {     
+      return this.httpObj.put(this.url + Obj.id, Obj);
+  }
+
+  delete(id:number):Observable<any>
+  {     
+      return this.httpObj.delete(this.url + id);
   }
 }
