@@ -10,6 +10,8 @@ import { DetailsComponent } from './details/details.component';
 import { DeptsComponent } from './depts/depts.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { DeptdetailsComponent } from './deptdetails/deptdetails.component';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,11 +22,13 @@ import { DeptdetailsComponent } from './deptdetails/deptdetails.component';
     DetailsComponent,
     DeptsComponent,
     AboutusComponent,
-    DeptdetailsComponent
+    DeptdetailsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
