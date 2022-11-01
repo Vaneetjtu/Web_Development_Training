@@ -81,5 +81,12 @@ export class EmplistComponent {
     })
   }
 
+  public clearData_click(){
+    this.empno  = 0;
+  this.name  = "";
+  this.job  = "";
+  this.deptno = 0;
+  this.selectedId=0;
+  }
 
 }
