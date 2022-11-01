@@ -1,0 +1,8 @@
+<h3>Departments List</h3>
+ 
+
+<ul>
+  <li *ngFor="let item of depts">
+    <a  href="javascript:void(0);" [routerLink]="['/deptdetail', item]">{{item}}</a>
+  </li>
+</ul>
