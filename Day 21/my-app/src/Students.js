@@ -7,39 +7,27 @@ const Students=(props)=>{
         {sid: 5, sname:"Aarry", course: "React JS", age: 22, total: 95},
         {sid: 6, sname:"Marry", course: "HTML", age: 21, total: 80}
     ]
-    // const data=(item)=>{
-    //     return <tr>
-    //             <td>{item.sid}</td>
-    //             <td>{item.sname}</td>
-    //             <td>{item.course}</td>
-    //             <td>{item.age}</td>
-    //             <td>{item.total}</td>
-    //         </tr>
-    // }
-    let result;
-        if(!props.course)
-        {
-            result=studentArray.map((item)=>{
-            return <tr>
+    const data=(item)=>{
+        return <tr>
                 <td>{item.sid}</td>
                 <td>{item.sname}</td>
                 <td>{item.course}</td>
                 <td>{item.age}</td>
                 <td>{item.total}</td>
             </tr>
+    }
+    let result;
+        if(!props.course)
+        {
+            result=studentArray.map((item)=>{
+                return data(item);
             })
     }
     else{
         result=studentArray.map((item)=>{
         if(props.course===item.course)
         {
-            return <tr>
-                <td>{item.sid}</td>
-                <td>{item.sname}</td>
-                <td>{item.course}</td>
-                <td>{item.age}</td>
-                <td>{item.total}</td>
-            </tr>
+            return data(item)
         }
 
     })}
