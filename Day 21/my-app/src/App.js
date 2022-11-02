@@ -1,6 +1,6 @@
 import Emp from "./Emp";
 import Skill from "./Skill";
-import Student from "./Student";
+import Students from "./Students";
 import User from "./User";
 import './App.css';
 
@@ -11,7 +11,10 @@ function App()
     <div>
       <h3>Developing Web Application using React</h3>
       <hr/>
-      <Student/>
+      <Students course="Angular"/>
+      <Students course="React JS"/>
+      <Students course="HTML"/>
+      <Students/>
        {/* <User />
        <hr/>
        <Skill />    
