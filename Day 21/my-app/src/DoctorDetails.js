@@ -12,15 +12,16 @@ const DoctorDetails=(props)=>{
         details.map((item)=>{
             if(item.Name===props.name)
             {
-                return <div class="card-deck">
+                return <div class="card-deck" style={{display: "inline-block", width: "auto", margin: "0 10px 0 0"}}>
                 <div class="card">
-                  <img src={img} style={{width: "100px", height: "100px", border: "2px", borderRadius: "5px", alignContent: "center"}} alt="Card image cap"/>
+                  <img src={img} style={{width: "70%", height: "70%", border: "2px", borderRadius: "5px", alignSelf: "center"}} alt="Card image cap"/>
                   <div class="card-body">
                     <h5 style={{textAlign: "center"}} class="card-title">{item.Name}</h5>
                     <p style={{textAlign: "center"}} class="card-text">{item.Age}</p>
                     <p style={{textAlign: "center"}} class="card-text">{item.Degree}</p>
                     <p style={{textAlign: "center"}} class="card-text">{item.Dept}</p>
                     <p style={{textAlign: "center"}} class="card-text">{item.Exp}</p>
+                    <input type="button" class="btn btn-primary" style={{marginLeft: "25px"}} value="Book Appointment"/>
                   </div>
                   </div>
                   </div>

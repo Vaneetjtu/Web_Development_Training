@@ -10,9 +10,7 @@ const Doctors=()=>{
     ]
     return(
         doc.map((item)=>{
-          return  <div style={{border:"1px solid Gray", marginBottom: "10px"}}>
-                <DoctorDetails name={item.Name}/>
-            </div>
+          return  <DoctorDetails name={item.Name}/>
         })
     )
 }

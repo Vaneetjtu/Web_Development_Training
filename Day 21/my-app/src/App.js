@@ -9,7 +9,7 @@ function App()
 { 
 
   return (
-    <div>
+    <>
       <h3>Developing Web Application using React</h3>
       <hr/>
       <Doctors/>
@@ -22,7 +22,7 @@ function App()
        <Skill />    
        <hr/>
        <Emp /> */}
-    </div>
+    </>
   );
 }
 
