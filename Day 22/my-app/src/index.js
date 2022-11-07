@@ -3,11 +3,29 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Routes, Outlet, Route, Link, BrowserRouter as Router  } from 'react-router-dom';
+import Login from './Login';
+import Emps from './Employee';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Router>
+    <Routes>
+      <Route path="/Employee" element={<Emps/>}></Route>
+      <Route path="/Login" element={<Login/>}></Route>
+    </Routes>
+    <h3 align="center">Routing implementation in React JS</h3>
+        <hr/>
+        <div style={{textAlign: 'center'}}> 
+            <Link to="/">Home</Link> |
+            <Link to="/Employee">Employee</Link> |
+            <Link to="/Login">Login</Link> |    
+
+        </div>
+        <hr/>
+    </Router>
+
   </React.StrictMode>
 );
 
