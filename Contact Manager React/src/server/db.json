@@ -1,0 +1,14 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "name": "Devanshu",
+      "email": "devanshu@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Shreyan",
+      "email": "shreyan@gmail.com"
+    }
+  ]
+}
